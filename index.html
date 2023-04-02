@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <button id="dropdown-toggle" onclick="toggleDropdown()">Menu</button>
+        <nav id="menu-dropdown">
+          <button id="show-stats" onclick="showStatsModal()">Statistics</button>
+          <button id="toggle-mode">Toggle Mode</button>
+          <div id="theme-buttons">
+            <button onclick="applyTheme('theme-dark')">Dark</button>
+            <button onclick="applyTheme('solarized-light')">Light</button>
+          </div>
+        </nav>
+      </div>
+  
+    <div id="game-info">
+        <div id="timer">Time: <span id="time-count">0</span></div>
+        <div id="mines-remaining">Mines Remaining: <span id="mines-count"></span></div>
+    </div>
+    <div id="game-container"></div>
+    
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h1 id="modal-title"></h1>
+            <button id="restart-btn">Restart</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+
+</html>
